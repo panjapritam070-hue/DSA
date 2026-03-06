@@ -12,6 +12,14 @@ class Node
 
     }
 };
+void deletenode( Node *&head)
+{
+  
+
+Node *temp=head;
+head=head->next;
+delete temp;
+}
 
 int main()
 {
@@ -31,7 +39,7 @@ int main()
             temp=temp->next;
         }
     }
-
+        deletenode(head);
     Node *temp1=head;
     while(temp1!=NULL)
     {
